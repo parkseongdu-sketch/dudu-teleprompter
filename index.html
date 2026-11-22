@@ -445,11 +445,36 @@
         top: 72px;
         white-space: normal;
       }
+      .btn-cluster {
+        flex: 0 1 auto;
+      }
+      .btn-cluster button {
+        flex: 0 0 auto;
+        padding: 8px 14px;
+        font-size: 13px;
+      }
+      .btn-cluster.secondary {
+        margin-left: auto;
+      }
+    }
+
+    /* Phones: keep the first line clear of the eye-line label */
+    @media (max-width: 639px) {
+      #stage {
+        padding-top: 26vh;
+      }
     }
 
     @media (max-width: 420px) {
       #eyeGuide {
-        top: 26%;
+        top: 24%;
+      }
+      #eyeGuide::before {
+        font-size: 10px;
+        opacity: 0.72;
+      }
+      #stage {
+        padding: 27vh 20px 72vh;
       }
       #scriptDisplay {
         font-size: 30px;
